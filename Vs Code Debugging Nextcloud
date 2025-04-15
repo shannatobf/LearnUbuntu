@@ -1,0 +1,81 @@
+I learned you can run and debug Nextcloud through Visual Studio Code using tools like XDebug for PHP. 
+
+Here’s a step-by-step guide of what I referenced to set this up:
+Step 1: Install XDebug
+Install XDebug:
+Open a terminal and install XDebug
+
+sudo apt-get install php-xdebug
+
+
+Configure XDebug:
+
+Open your php.ini file 
+(usually located at /etc/php/7.4/apache2/php.ini or /etc/php/7.4/cli/php.ini).
+Add the following configuration:
+
+zend_extension=/usr/lib/php/20190902/xdebug.so
+xdebug.remote_enable=1
+xdebug.remote_host=127.0.0.1
+xdebug.remote_port=9000
+xdebug.remote_handler=dbgp
+Restart Apache:
+
+Restart your web server to apply the changes:
+sudo systemctl restart apache2  - REAL ERROR RECEIVED
+
+srowe@Ubuntu:/etc/php/8.3/apache2$ 
+sudo systemctl restart apache2
+Job for apache2.service failed because the control process exited with error code.
+See "systemctl status apache2.service" and "journalctl -xeu apache2.service" for details.
+
+
+
+Step 2: Configure Visual Studio Code
+Install PHP Debug Extension:
+
+Open Visual Studio Code and go to the Extensions view (Ctrl+Shift+X).
+Search for and install the PHP Debug extension.
+Configure VS Code for XDebug:
+
+Open the Command Palette (Ctrl+Shift+P) and select Debug: Open launch.json.
+Add the following configuration to launch.json:
+
+Step 3: Enable Debug Mode in Nextcloud
+Enable Debug Mode:
+Open the config.php file in your Nextcloud installation directory (usually located at /var/www/nextcloud/config/config.php).
+Add or modify the following line to enable debug mode:
+
+Step 4: Start Debugging
+Set Breakpoints:
+
+Open the PHP files you want to debug in Visual Studio Code.
+Set breakpoints by clicking in the gutter next to the line numbers.
+Start Debugging:
+
+Open the Debug view (Ctrl+Shift+D) and select Listen for XDebug.
+Click the green play button to start debugging.
+Test Nextcloud:
+
+Open your browser and navigate to your Nextcloud instance.
+Perform actions that will trigger the code where you set breakpoints.
+Additional Tips
+Check Logs: Monitor the Nextcloud logs for any errors or debugging information. The log file is usually located at /var/www/nextcloud/data/nextcloud.log1.
+Browser Extensions: Use browser extensions like XDebug Helper for Chrome to easily start debugging sessions 
+
+
+
+SYNTAX ERRORS - research and correct syntax errors 
+
+{
+      "version": "0.2.0",
+      "configurations": [
+        {
+          "name": "Listen for XDebug",
+          "type": "php",
+          "request": "launch",
+          "port": 9000
+        }
+      ]
+    }
+    
