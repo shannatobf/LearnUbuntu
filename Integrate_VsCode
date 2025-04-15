@@ -1,0 +1,59 @@
+This is a detailed guide on how to Install Visual Studio Code in Virtual Box on your Linux Ubuntu OS! Ultimately the goal is to have everything configured locally and setup for VS Code and we want the ability to merge/pull/push through GitHub.
+
+Lets Get started!
+
+Step 1: Download and Install Visual Studio Code
+Download Visual Studio Code:
+
+Go to the Visual Studio Code download page.
+Choose the appropriate version for your operating system (e.g., .deb for Debian/Ubuntu).
+Install Visual Studio Code:
+
+Open a terminal and navigate to the directory where the .deb file is downloaded.
+Run the following command to install it:
+
+Step 2: Set Up Nextcloud Files Locally
+Install Nextcloud Client:
+
+Install the Nextcloud desktop client to sync your files locally.
+Download it from the Nextcloud download page.
+Configure Nextcloud Client:
+
+Open the Nextcloud client and log in with your credentials.
+Set up the sync folder to a directory on your VM, for example, ~/Nextcloud.
+Step 3: Clone Your Repository
+Install Git:
+
+If you don't have Git installed, you can install it using:
+
+Clone Your Repository:
+
+Open a terminal and navigate to your Nextcloud sync folder:
+
+Clone your repository:
+
+Step 4: Open Your Project in Visual Studio Code
+Open VS Code:
+
+Launch Visual Studio Code from your applications menu or by running code in the terminal.
+Open Your Project:
+
+In VS Code, go to File > Open Folder.
+Navigate to ~/Nextcloud/Nextcloud-Repo and open it.
+Step 5: Configure VS Code for Nextcloud Development
+Install Extensions:
+
+Install the following extensions for a better development experience:
+PHP Intelephense: For PHP language support.
+GitLens: For Git integration.
+Nextcloud: If available, for specific Nextcloud development support.
+Set Up Workspace:
+
+Configure your workspace settings to point to the Nextcloud framework files if needed. This can be done by modifying the settings.json file in your workspace.
+Step 6: Sync and Manage Files
+Sync Files:
+
+Ensure your Nextcloud client is running and syncing files between your local directory and the Nextcloud server.
+Manage Files:
+
+Use the Nextcloud client to manage which files and folders are synced to your local machine.
