@@ -1,0 +1,18 @@
+Create a DNS record at Cloudflare(DNS host):
+
+1. Add A or CNAME record
+
+A record:
+
+www ---> your IP Address
+nextcloud --> your server's IP address
+
+
+
+
+Portfolio Website: Cybermastersacademy.org
+
+CyberBlog
+CyberMaterial 
+CyberWorld 
+CyberTerms
